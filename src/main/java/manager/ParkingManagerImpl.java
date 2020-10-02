@@ -10,6 +10,7 @@ import model.rule.NearestParkingRule;
 import model.rule.ParkingRule;
 
 import java.lang.reflect.Constructor;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -69,8 +70,15 @@ public class ParkingManagerImpl implements ParkingManager {
         return null;
     }
 
-    public List<String> getSlotNosForAge(int age) {
-        return null;
+    public List<Integer> getSlotNosForAge(int age) {
+        List<Integer> list = new ArrayList<Integer>();
+        for(int i = 0; i<=capacity; i++){
+            Vehicle vehicle = slotVechileMap.get(i);
+            if(vehicle.getDriverAge() == age){
+                list.add(i);
+            }
+        }
+        return list;
     }
 
     public int getSlotNoForRegNo(int regNo) {

@@ -8,6 +8,8 @@ import manager.ParkingManager;
 import manager.ParkingManagerImpl;
 import model.Vehicle;
 
+import java.util.List;
+
 public class ParkingServiceImpl implements ParkingService {
 
     private ParkingManager parkingDataManager;
@@ -44,7 +46,18 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void getSlotNosForAge(int age) {
+        if(parkingDataManager == null) {
+            return;
+        }
+        List<Integer> slots = parkingDataManager.getSlotNosForAge(age);
+        for(int i = 0; i<slots.size(); i++) {
+            if (i == slots.size() - 1) {
+                System.out.print(slots.get(i));
+            } else {
+                System.out.print(slots.get(i) + ",");
 
+            }
+        }
     }
 
     public void getSlotNoForRegNo(int regNo) {
