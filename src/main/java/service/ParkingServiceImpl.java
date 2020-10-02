@@ -3,6 +3,7 @@
  */
 package service;
 
+import constants.Constant;
 import manager.ParkingManager;
 import manager.ParkingManagerImpl;
 import model.Vehicle;
@@ -21,6 +22,11 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public int park(Vehicle vehicle) {
+        if(parkingDataManager == null){
+            return -1;
+        }
+        int parkedSlot = parkingDataManager.parkCar(vehicle);
+        System.out.println("Car with vehicle registration number " + '"' +  vehicle.getRegistrationNo() + '"' + " has been parked at slot number " + parkedSlot);
         return 0;
     }
 
