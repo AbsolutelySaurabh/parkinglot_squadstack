@@ -23,13 +23,11 @@ public class Main {
         BufferedReader bufferReader = null;
 
         File inputFile = new File(args[0]);
-//        File inputFile = new File("input.txt");
         String input = null;
         try {
             bufferReader = new BufferedReader(new FileReader(inputFile));
             while ((input = bufferReader.readLine()) != null) {
                 input = input.trim();
-//                System.out.println("input: " + input);
                 processor.execute(input);
             }
         } catch (Exception e) {

@@ -5,14 +5,14 @@ package io.squadstack.parkinglot.model.rule;
 
 import java.util.TreeSet;
 
-public class NearestParkingRule implements ParkingRule
-{
+public class NearestParkingRule implements ParkingRule {
     //set to maintain natural ordering of slots
     private TreeSet<Integer> freeSlots;
 
-    public NearestParkingRule(){
+    public NearestParkingRule() {
         this.freeSlots = new TreeSet<Integer>();
     }
+
     public void addSlot(int slotNo) {
         this.freeSlots.add(slotNo);
     }

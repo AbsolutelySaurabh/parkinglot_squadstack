@@ -15,25 +15,25 @@ public class ParkingServiceImpl implements ParkingService {
     private ParkingManager parkingDataManager;
 
     public void createParkingLot(int capacity) {
-        if(parkingDataManager != null){
+        if (parkingDataManager != null) {
             //paring already exisst;
             return;
         }
-        this.parkingDataManager = new ParkingManagerImpl(capacity);
+        this.parkingDataManager = ParkingManagerImpl.getInstance(capacity);
         System.out.println("Created parking of " + capacity + " slots");
     }
 
     public int park(Vehicle vehicle) {
-        if(parkingDataManager == null){
-            return -1;
+        if (parkingDataManager == null) {
+            return Constant.NOT_AVAILABLE;
         }
         int parkedSlot = parkingDataManager.parkCar(vehicle);
-        System.out.println("Car with vehicle registration number " + '"' +  vehicle.getRegistrationNo() + '"' + " has been parked at slot number " + parkedSlot);
+        System.out.println("Car with vehicle registration number " + '"' + vehicle.getRegistrationNo() + '"' + " has been parked at slot number " + parkedSlot);
         return parkedSlot;
     }
 
     public void unPark(int slotNo) {
-        if(parkingDataManager == null){
+        if (parkingDataManager == null) {
             return;
         }
         Vehicle vehicle = parkingDataManager.leaveCar(slotNo);
@@ -42,15 +42,15 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void getRegNosForAge(int age) {
-        if(parkingDataManager == null) {
+        if (parkingDataManager == null) {
             return;
         }
         List<String> regNos = parkingDataManager.getRegNosForAge(age);
-        if(regNos.size() == 0){
+        if (regNos.size() == 0) {
             System.out.println(Constant.NULL);
             return;
         }
-        for(int i = 0; i<regNos.size(); i++) {
+        for (int i = 0; i < regNos.size(); i++) {
             if (i == regNos.size() - 1) {
                 System.out.print(regNos.get(i));
             } else {
@@ -61,15 +61,15 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void getSlotNosForAge(int age) {
-        if(parkingDataManager == null) {
+        if (parkingDataManager == null) {
             return;
         }
         List<Integer> slots = parkingDataManager.getSlotNosForAge(age);
-        if(slots.size() == 0){
+        if (slots.size() == 0) {
             System.out.println(Constant.NULL);
             return;
         }
-        for(int i = 0; i<slots.size(); i++) {
+        for (int i = 0; i < slots.size(); i++) {
             if (i == slots.size() - 1) {
                 System.out.print(slots.get(i));
             } else {
@@ -77,10 +77,11 @@ public class ParkingServiceImpl implements ParkingService {
 
             }
         }
+        System.out.println();
     }
 
     public void getSlotNoForRegNo(String regNo) {
-        if(parkingDataManager == null){
+        if (parkingDataManager == null) {
             return;
         }
         int slotNo = parkingDataManager.getSlotNoForRegNo(regNo);
@@ -88,7 +89,7 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void flush() {
-        if(parkingDataManager == null){
+        if (parkingDataManager == null) {
             return;
         }
         parkingDataManager.flush();

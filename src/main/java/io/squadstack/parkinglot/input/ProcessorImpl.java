@@ -9,6 +9,7 @@ import io.squadstack.parkinglot.service.ParkingService;
 
 public class ProcessorImpl implements Processor {
     private ParkingService parkingService;
+
     public void setService(ParkingService parkingService) {
         this.parkingService = parkingService;
     }

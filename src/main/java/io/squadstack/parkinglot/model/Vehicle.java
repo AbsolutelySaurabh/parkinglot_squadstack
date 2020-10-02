@@ -21,12 +21,15 @@ public abstract class Vehicle {
     public String getRegistrationNo() {
         return registrationNo;
     }
+
     public void setRegistrationNo(String registrationNo) {
         this.registrationNo = registrationNo;
     }
+
     public int getDriverAge() {
         return driverAge;
     }
+
     public void setDriverAge(int driverAge) {
         this.driverAge = driverAge;
     }

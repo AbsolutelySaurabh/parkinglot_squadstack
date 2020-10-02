@@ -1,9 +1,27 @@
 
 ## SquadStack TakeHome assignment
 
+##Project Requirements
+
+JDK 11.
+
+Maven 3.1.
 
 
-Resources For this project:
+## Setting Up:
+
+ `./bin/setup`	
+ 
+ 
+## Running the project:
+
+`./bin/parking_lot <input_filepath>`<br>
+The inputs commands are expected and taken from the file specified.<br>
+ eg: `./bin/parking_lot bin/inputs.txt`
+``
+<br>
+<br>
+#### Resources I used for this project:
 
 1. TreeSet Java: for sorted parking slots
 2. Singleton Design Pattern
