@@ -1,0 +1,12 @@
+io/squadstack/parkinglot/manager/ParkingManager.class
+io/squadstack/parkinglot/model/Car.class
+io/squadstack/parkinglot/input/Processor.class
+io/squadstack/parkinglot/input/ProcessorImpl.class
+io/squadstack/parkinglot/constants/Constant.class
+io/squadstack/parkinglot/manager/ParkingManagerImpl.class
+io/squadstack/parkinglot/Main.class
+io/squadstack/parkinglot/model/rule/NearestParkingRule.class
+io/squadstack/parkinglot/model/Vehicle.class
+io/squadstack/parkinglot/model/rule/ParkingRule.class
+io/squadstack/parkinglot/service/ParkingService.class
+io/squadstack/parkinglot/service/ParkingServiceImpl.class

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="parkinglot_squadstack:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/parkinglot_squadstack_jar</output-path>
+    <root id="archive" name="parkinglot_squadstack.jar">
+      <element id="module-output" name="parkinglot_squadstack" />
+    </root>
+  </artifact>
+</component>
