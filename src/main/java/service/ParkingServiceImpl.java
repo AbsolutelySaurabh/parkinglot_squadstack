@@ -79,7 +79,7 @@ public class ParkingServiceImpl implements ParkingService {
         }
     }
 
-    public void getSlotNoForRegNo(int regNo) {
+    public void getSlotNoForRegNo(String regNo) {
         if(parkingDataManager == null){
             return;
         }

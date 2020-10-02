@@ -13,7 +13,7 @@ public interface ParkingManager {
     public Vehicle leaveCar(int slotNo);
     public List<String> getRegNosForAge(int age);
     public List<Integer> getSlotNosForAge(int age);
-    public int getSlotNoForRegNo(int regNo);
+    public int getSlotNoForRegNo(String regNo);
     public void flush();
 
 }

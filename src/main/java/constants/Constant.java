@@ -7,9 +7,10 @@ package constants;
 public class Constant {
 
     public static final String CREATE_PARKING_LOT = "Create_parking_lot";
-    public static final String PARK = "park";
-    public static final String LEAVE = "leave";
+    public static final String PARK = "Park";
+    public static final String LEAVE = "Leave";
     public static final String NULL = "null";
+    public static final String INVALID_REQUEST = "Invalid Request";
 
     public static final String VEHICLE_REGISTRATION_NO_FOR_DRIVER_OF_AGE = "Vehicle_registration_number_for_driver_of_age";
     public static final String SLOT_NUMBERS_FOR_DRIVER_OF_AGE = "Slot_numbers_for_driver_of_age";

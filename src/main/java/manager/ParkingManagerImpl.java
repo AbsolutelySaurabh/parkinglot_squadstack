@@ -88,7 +88,7 @@ public class ParkingManagerImpl implements ParkingManager {
         return list;
     }
 
-    public int getSlotNoForRegNo(int regNo) {
+    public int getSlotNoForRegNo(String regNo) {
         for(int i = 0; i<=capacity; i++){
             Vehicle vehicle = slotVechileMap.get(i);
             if(vehicle.getRegistrationNo().equals(regNo)){
