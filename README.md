@@ -21,6 +21,7 @@ The inputs commands are expected and taken from the file specified.<br>
  
 <br>
 <br>
+
 #### Resources I used for this project:
 
 1. TreeSet Java: for sorted parking slots
