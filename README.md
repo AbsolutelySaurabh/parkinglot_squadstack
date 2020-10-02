@@ -17,9 +17,9 @@
  
 ## Running the project:
 
-`./bin/parking_lot <input_filepath>`<br>
+`./bin/parkingLot <input_filepath>`<br>
 The inputs commands are expected and taken from the file specified.<br>
- eg: `./bin/parking_lot bin/inputs.txt`
+ eg: `./bin/parkingLot bin/inputs.txt`
  
 <br>
 <br>
