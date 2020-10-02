@@ -37,6 +37,10 @@ public class ParkingServiceImpl implements ParkingService {
             return;
         }
         Vehicle vehicle = parkingDataManager.leaveCar(slotNo);
+        if(vehicle == null){
+            System.out.println(Constant.NULL);
+            return;
+        }
         System.out.println("Slot number 2 vacated, the car with vehicle registration number " + '"' + vehicle.getRegistrationNo() + '"' + " left the space, the driver of the car was of age " + vehicle.getDriverAge());
 
     }
@@ -85,7 +89,11 @@ public class ParkingServiceImpl implements ParkingService {
             return;
         }
         int slotNo = parkingDataManager.getSlotNoForRegNo(regNo);
-        System.out.println(slotNo);
+        if(slotNo == Constant.NOT_FOUND){
+            System.out.println("Car with Registration No " + regNo + " Not found.");
+        }else {
+            System.out.println(slotNo);
+        }
     }
 
     public void flush() {

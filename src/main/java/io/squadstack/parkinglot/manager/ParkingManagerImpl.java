@@ -58,7 +58,7 @@ public class ParkingManagerImpl implements ParkingManager {
     public Vehicle leaveCar(int slotNo) {
         Vehicle vehicle = slotVechileMap.get(slotNo);
         if (vehicle == null) {
-            System.out.println(Constant.NOT_FOUND);
+            System.out.println("Slot already vacant");
             return null;
         }
         this.avlSlots++;
