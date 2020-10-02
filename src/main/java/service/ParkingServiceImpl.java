@@ -61,7 +61,11 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void getSlotNoForRegNo(int regNo) {
-
+        if(parkingDataManager == null){
+            return;
+        }
+        int slotNo = parkingDataManager.getSlotNoForRegNo(regNo);
+        System.out.println(slotNo);
     }
 
     public int getAvlSlotsCount() {

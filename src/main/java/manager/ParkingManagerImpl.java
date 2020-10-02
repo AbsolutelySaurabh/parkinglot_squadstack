@@ -67,6 +67,7 @@ public class ParkingManagerImpl implements ParkingManager {
     }
 
     public List<String> getRegNosForAge(int age) {
+
         return null;
     }
 
@@ -82,7 +83,13 @@ public class ParkingManagerImpl implements ParkingManager {
     }
 
     public int getSlotNoForRegNo(int regNo) {
-        return 0;
+        for(int i = 0; i<=capacity; i++){
+            Vehicle vehicle = slotVechileMap.get(i);
+            if(vehicle.getRegistrationNo().equals(regNo)){
+                return i;
+            }
+        }
+        return Constant.NOT_FOUND;
     }
 
     public int getAvlSlotsCount() {
