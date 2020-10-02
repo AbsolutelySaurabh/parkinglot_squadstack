@@ -90,7 +90,7 @@ public class ParkingServiceImpl implements ParkingService {
         }
         int slotNo = parkingDataManager.getSlotNoForRegNo(regNo);
         if(slotNo == Constant.NOT_FOUND){
-            System.out.println("Car with Registration No " + regNo + " Not found.");
+            System.out.println("Car with Registration Number " + regNo + " Not found.");
         }else {
             System.out.println(slotNo);
         }

@@ -19,7 +19,7 @@
 
 `./bin/parkingLot <input_filepath>`<br>
 The inputs commands are expected and taken from the file specified.<br>
- eg: `./bin/parkingLot bin/inputs.txt`
+ eg: `./bin/parkingLot bin/input.txt`
  
 <br>
 <br>
