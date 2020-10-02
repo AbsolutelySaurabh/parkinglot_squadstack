@@ -69,10 +69,6 @@ public class ParkingManagerImpl implements ParkingManager {
         return 0;
     }
 
-    public List<String> getStatus() {
-        return null;
-    }
-
     public void flush() {
         this.capacity = 0;
         this.parkingRule = null;
