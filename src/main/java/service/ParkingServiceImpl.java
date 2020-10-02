@@ -31,7 +31,6 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void unPark(int slotNo) {
-
     }
 
     public void getRegNosForAge(int age) {

@@ -46,11 +46,18 @@ public class ParkingManagerImpl implements ParkingManager {
     }
 
     public int parkCar(Vehicle vehicle) {
-        return 0;
+        if(this.avlSlots == 0){
+            return Constant.NOT_AVAILABLE;
+        }
+        int currAvlSlot = parkingRule.getSlot();
+        slotVechileMap.put(currAvlSlot, vehicle);
+        avlSlots--;
+        parkingRule.removeSlot(currAvlSlot);
+        return currAvlSlot;
     }
 
-    public boolean leaveCar(int slotNo) {
-        return false;
+    public Vehicle leaveCar(int slotNo) {
+        return null;
     }
 
     public List<String> getRegNosForAge(int age) {
