@@ -67,8 +67,14 @@ public class ParkingManagerImpl implements ParkingManager {
     }
 
     public List<String> getRegNosForAge(int age) {
-
-        return null;
+        List<String> list = new ArrayList<String>();
+        for(int i = 0; i<=capacity; i++){
+            Vehicle vehicle = slotVechileMap.get(i);
+            if(vehicle.getDriverAge() == age){
+                list.add(vehicle.getRegistrationNo());
+            }
+        }
+        return list;
     }
 
     public List<Integer> getSlotNosForAge(int age) {

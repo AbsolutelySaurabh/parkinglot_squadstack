@@ -42,7 +42,18 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void getRegNosForAge(int age) {
+        if(parkingDataManager == null) {
+            return;
+        }
+        List<String> regNos = parkingDataManager.getRegNosForAge(age);
+        for(int i = 0; i<regNos.size(); i++) {
+            if (i == regNos.size() - 1) {
+                System.out.print(regNos.get(i));
+            } else {
+                System.out.print(regNos.get(i) + ",");
 
+            }
+        }
     }
 
     public void getSlotNosForAge(int age) {
