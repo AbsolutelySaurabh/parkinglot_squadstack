@@ -79,10 +79,6 @@ public class ParkingServiceImpl implements ParkingService {
         System.out.println(slotNo);
     }
 
-    public int getAvlSlotsCount() {
-        return 0;
-    }
-
     public void flush() {
 
     }

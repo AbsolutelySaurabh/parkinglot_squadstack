@@ -14,7 +14,6 @@ public interface ParkingManager {
     public List<String> getRegNosForAge(int age);
     public List<Integer> getSlotNosForAge(int age);
     public int getSlotNoForRegNo(int regNo);
-    public int getAvlSlotsCount();
     public void flush();
 
 }

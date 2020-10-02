@@ -97,11 +97,6 @@ public class ParkingManagerImpl implements ParkingManager {
         }
         return Constant.NOT_FOUND;
     }
-
-    public int getAvlSlotsCount() {
-        return 0;
-    }
-
     public void flush() {
         this.capacity = 0;
         this.parkingRule = null;

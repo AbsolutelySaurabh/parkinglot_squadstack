@@ -14,7 +14,5 @@ public interface ParkingService {
     public void getRegNosForAge(int age);
     public void getSlotNosForAge(int age);
     public void getSlotNoForRegNo(int regNo);
-    public int getAvlSlotsCount();
-
     public void flush();
 }
