@@ -1,11 +1,11 @@
 
 ## SquadStack TakeHome assignment
 
-##Project Requirements
+## Project Requirements
 
-JDK 11.
+`JDK 11.`
 
-Maven 3.1.
+`Maven 3.1.`
 
 <br>
 
