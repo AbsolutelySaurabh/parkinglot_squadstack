@@ -7,11 +7,13 @@ JDK 11.
 
 Maven 3.1.
 
+<br>
 
 ## Setting Up:
 
  `./bin/setup`	
  
+ <br>
  
 ## Running the project:
 
@@ -22,7 +24,7 @@ The inputs commands are expected and taken from the file specified.<br>
 <br>
 <br>
 <br>
-<br>
+
 
 #### Things left due to time shortage [time take - 6 hrs ]:
 - more test cases to handle exceptions
