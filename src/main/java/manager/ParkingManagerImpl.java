@@ -3,10 +3,13 @@
  */
 package manager;
 
+import constants.Constant;
+import jdk.internal.vm.compiler.collections.EconomicSet;
 import model.Vehicle;
 import model.rule.NearestParkingRule;
 import model.rule.ParkingRule;
 
+import java.lang.reflect.Constructor;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,9 +17,10 @@ import java.util.Map;
 public class ParkingManagerImpl implements ParkingManager {
 
     private static ParkingManagerImpl instance;
-    private static int capacity;
-    private static ParkingRule parkingRule;
-    private static Map<Integer, Vehicle> slotVechileMap;
+    private int capacity;
+    private ParkingRule parkingRule;
+    private int avlSlots;
+    private Map<Integer, Vehicle> slotVechileMap;
 
     public static ParkingManagerImpl getInstance(int capacity){
         if(instance == null){
@@ -33,6 +37,7 @@ public class ParkingManagerImpl implements ParkingManager {
         this.capacity = capacity;
         this.parkingRule = new NearestParkingRule();
         this.slotVechileMap = new HashMap<Integer, Vehicle>();
+        this.avlSlots = capacity;
         for(int i = 1; i<=capacity; i++){
             this.slotVechileMap.put(i, null);
             parkingRule.addSlot(i);
@@ -69,6 +74,10 @@ public class ParkingManagerImpl implements ParkingManager {
     }
 
     public void flush() {
-
+        this.capacity = 0;
+        this.parkingRule = null;
+        this.slotVechileMap = null;
+        this.instance = null;
+        this.avlSlots = 0;
     }
 }
