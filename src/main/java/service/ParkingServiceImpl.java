@@ -31,6 +31,12 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void unPark(int slotNo) {
+        if(parkingDataManager == null){
+            return;
+        }
+        Vehicle vehicle = parkingDataManager.leaveCar(slotNo);
+        System.out.println("Slot number 2 vacated, the car with vehicle registration number " + '"' + vehicle.getRegistrationNo() + '"' + " left the space, the driver of the car was of age " + vehicle.getDriverAge());
+
     }
 
     public void getRegNosForAge(int age) {

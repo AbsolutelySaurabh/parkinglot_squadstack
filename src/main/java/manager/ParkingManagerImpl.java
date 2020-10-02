@@ -57,7 +57,12 @@ public class ParkingManagerImpl implements ParkingManager {
     }
 
     public Vehicle leaveCar(int slotNo) {
-        return null;
+        Vehicle vehicle = slotVechileMap.get(slotNo);
+        if(vehicle == null){
+            System.out.println(Constant.NOT_FOUND);
+            return null;
+        }
+        return vehicle;
     }
 
     public List<String> getRegNosForAge(int age) {
