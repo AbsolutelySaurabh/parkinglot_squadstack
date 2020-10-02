@@ -1,15 +1,13 @@
 /**
  * @author AbsolutelySaurabh
  */
-package manager;
+package io.squadstack.parkinglot.manager;
 
-import constants.Constant;
-import jdk.internal.vm.compiler.collections.EconomicSet;
-import model.Vehicle;
-import model.rule.NearestParkingRule;
-import model.rule.ParkingRule;
+import io.squadstack.parkinglot.constants.Constant;
+import io.squadstack.parkinglot.model.Vehicle;
+import io.squadstack.parkinglot.model.rule.NearestParkingRule;
+import io.squadstack.parkinglot.model.rule.ParkingRule;
 
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -63,6 +61,9 @@ public class ParkingManagerImpl implements ParkingManager {
             System.out.println(Constant.NOT_FOUND);
             return null;
         }
+        this.avlSlots++;
+        parkingRule.addSlot(slotNo);
+        slotVechileMap.put(slotNo, null);
         return vehicle;
     }
 
@@ -70,7 +71,7 @@ public class ParkingManagerImpl implements ParkingManager {
         List<String> list = new ArrayList<String>();
         for(int i = 0; i<=capacity; i++){
             Vehicle vehicle = slotVechileMap.get(i);
-            if(vehicle.getDriverAge() == age){
+            if(vehicle!=null && vehicle.getDriverAge() == age){
                 list.add(vehicle.getRegistrationNo());
             }
         }
@@ -81,7 +82,7 @@ public class ParkingManagerImpl implements ParkingManager {
         List<Integer> list = new ArrayList<Integer>();
         for(int i = 0; i<=capacity; i++){
             Vehicle vehicle = slotVechileMap.get(i);
-            if(vehicle.getDriverAge() == age){
+            if(vehicle!=null && vehicle.getDriverAge() == age){
                 list.add(i);
             }
         }
@@ -91,7 +92,7 @@ public class ParkingManagerImpl implements ParkingManager {
     public int getSlotNoForRegNo(String regNo) {
         for(int i = 0; i<=capacity; i++){
             Vehicle vehicle = slotVechileMap.get(i);
-            if(vehicle.getRegistrationNo().equals(regNo)){
+            if(vehicle!=null && vehicle.getRegistrationNo().equals(regNo)){
                 return i;
             }
         }

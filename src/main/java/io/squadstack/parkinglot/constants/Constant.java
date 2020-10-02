@@ -1,4 +1,4 @@
-package constants;
+package io.squadstack.parkinglot.constants;
 
 /**
  * @author AbsolutelySaurabh

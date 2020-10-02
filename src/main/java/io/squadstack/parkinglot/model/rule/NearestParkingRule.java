@@ -1,7 +1,7 @@
 /**
  * @author AbsolutelySaurabh
  */
-package model.rule;
+package io.squadstack.parkinglot.model.rule;
 
 import java.util.TreeSet;
 

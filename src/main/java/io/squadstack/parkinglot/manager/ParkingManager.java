@@ -1,9 +1,9 @@
 /**
  * @author AbsolutelySaurabh
  */
-package manager;
+package io.squadstack.parkinglot.manager;
 
-import model.Vehicle;
+import io.squadstack.parkinglot.model.Vehicle;
 
 import java.util.List;
 

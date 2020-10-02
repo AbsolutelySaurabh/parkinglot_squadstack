@@ -1,12 +1,13 @@
-import constants.Constant;
-import input.Processor;
-import input.ProcessorImpl;
-import service.ParkingServiceImpl;
+package io.squadstack.parkinglot;
+
+import io.squadstack.parkinglot.constants.Constant;
+import io.squadstack.parkinglot.input.Processor;
+import io.squadstack.parkinglot.input.ProcessorImpl;
+import io.squadstack.parkinglot.service.ParkingServiceImpl;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.nio.Buffer;
 
 /**
  * @author AbsolutelySaurabh
@@ -20,16 +21,20 @@ public class Main {
 
         //file based io
         BufferedReader bufferReader = null;
+
         File inputFile = new File(args[0]);
+//        File inputFile = new File("input.txt");
         String input = null;
         try {
             bufferReader = new BufferedReader(new FileReader(inputFile));
             while ((input = bufferReader.readLine()) != null) {
                 input = input.trim();
+//                System.out.println("input: " + input);
                 processor.execute(input);
             }
         } catch (Exception e) {
-            System.out.println(Constant.INVALID_REQUEST);
+            System.out.println();
+            System.out.println(Constant.INVALID_REQUEST + " " + e.getMessage());
         }
     }
 }

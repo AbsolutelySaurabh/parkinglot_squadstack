@@ -1,12 +1,12 @@
 /**
  * @author AbsolutelySaurabh
  */
-package service;
+package io.squadstack.parkinglot.service;
 
-import constants.Constant;
-import manager.ParkingManager;
-import manager.ParkingManagerImpl;
-import model.Vehicle;
+import io.squadstack.parkinglot.constants.Constant;
+import io.squadstack.parkinglot.manager.ParkingManager;
+import io.squadstack.parkinglot.manager.ParkingManagerImpl;
+import io.squadstack.parkinglot.model.Vehicle;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class ParkingServiceImpl implements ParkingService {
     private ParkingManager parkingDataManager;
 
     public void createParkingLot(int capacity) {
-        if(parkingDataManager == null){
+        if(parkingDataManager != null){
             //paring already exisst;
             return;
         }
@@ -29,7 +29,7 @@ public class ParkingServiceImpl implements ParkingService {
         }
         int parkedSlot = parkingDataManager.parkCar(vehicle);
         System.out.println("Car with vehicle registration number " + '"' +  vehicle.getRegistrationNo() + '"' + " has been parked at slot number " + parkedSlot);
-        return 0;
+        return parkedSlot;
     }
 
     public void unPark(int slotNo) {

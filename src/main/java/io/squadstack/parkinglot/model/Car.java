@@ -1,4 +1,4 @@
-package model;
+package io.squadstack.parkinglot.model;
 
 /**
  * @author AbsolutelySaurabh

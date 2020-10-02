@@ -1,9 +1,9 @@
 /**
  * @author AbsolutelySaurabh
  */
-package input;
+package io.squadstack.parkinglot.input;
 
-import service.ParkingService;
+import io.squadstack.parkinglot.service.ParkingService;
 
 public interface Processor {
     public void setService(ParkingService parkingService);

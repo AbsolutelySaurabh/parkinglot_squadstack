@@ -1,9 +1,9 @@
 /**
  * @author AbsolutelySaurabh
  */
-package service;
+package io.squadstack.parkinglot.service;
 
-import model.Vehicle;
+import io.squadstack.parkinglot.model.Vehicle;
 
 public interface ParkingService {
 
