@@ -5,4 +5,5 @@ Resources For this project:
 
 1. TreeSet Java: for sorted parking slots
 2. Singleton Design Pattern
-3. 
+3. Java file system - https://www.geeksforgeeks.org/different-ways-reading-text-file-java/
+

@@ -46,6 +46,10 @@ public class ParkingServiceImpl implements ParkingService {
             return;
         }
         List<String> regNos = parkingDataManager.getRegNosForAge(age);
+        if(regNos.size() == 0){
+            System.out.println(Constant.NULL);
+            return;
+        }
         for(int i = 0; i<regNos.size(); i++) {
             if (i == regNos.size() - 1) {
                 System.out.print(regNos.get(i));
@@ -61,6 +65,10 @@ public class ParkingServiceImpl implements ParkingService {
             return;
         }
         List<Integer> slots = parkingDataManager.getSlotNosForAge(age);
+        if(slots.size() == 0){
+            System.out.println(Constant.NULL);
+            return;
+        }
         for(int i = 0; i<slots.size(); i++) {
             if (i == slots.size() - 1) {
                 System.out.print(slots.get(i));
@@ -80,6 +88,9 @@ public class ParkingServiceImpl implements ParkingService {
     }
 
     public void flush() {
-
+        if(parkingDataManager == null){
+            return;
+        }
+        parkingDataManager.flush();
     }
 }
