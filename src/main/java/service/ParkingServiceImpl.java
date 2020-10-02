@@ -3,11 +3,21 @@
  */
 package service;
 
+import manager.ParkingManager;
+import manager.ParkingManagerImpl;
 import model.Vehicle;
 
 public class ParkingServiceImpl implements ParkingService {
-    public void createParkingLot(int capacity) {
 
+    private ParkingManager parkingDataManager;
+
+    public void createParkingLot(int capacity) {
+        if(parkingDataManager == null){
+            //paring already exisst;
+            return;
+        }
+        this.parkingDataManager = new ParkingManagerImpl(capacity);
+        System.out.println("Created parking of " + capacity + " slots");
     }
 
     public int park(Vehicle vehicle) {
